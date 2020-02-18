@@ -15,7 +15,9 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@MapperScan(basePackages={"com.example.demos.db.mapper"})
+
+// mapper의 위치 정확하게 지정해주어야함
+@MapperScan(basePackages={"com.example.demos.db.mapper", "com.example.demos.security.mapper"})
 @EnableTransactionManagement
 public class DatabaseConfig {
 
