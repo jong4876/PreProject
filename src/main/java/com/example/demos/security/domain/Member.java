@@ -2,6 +2,8 @@ package com.example.demos.security.domain;
 
 import java.util.Collection;
 
+import org.springframework.security.core.GrantedAuthority;
+
 public class Member {
 
 	private String username;
@@ -17,6 +19,9 @@ public class Member {
 	private boolean isCredentialsNonExpired;
 	
 	private boolean isEnabled;
+	
+    private Collection<? extends GrantedAuthority> authorities;
+
 	
 	public String getUsername() {
 		return username;
@@ -73,6 +78,12 @@ public class Member {
 	public void setEnabled(boolean isEnabled) {
 		this.isEnabled = isEnabled;
 	}
-
-
+	
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return authorities;
+    }
+ 
+    public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
+        this.authorities = authorities;
+    }
 }

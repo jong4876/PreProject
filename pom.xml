@@ -20,7 +20,14 @@
 	</properties>
 
 	<dependencies>
-	
+
+		<!-- SECURITY -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<!-- SECURITY -->
+
 		<!-- jsp -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
